@@ -18,24 +18,7 @@
   },
   "scripts": {
     "start":  "node src/index.js",
-    "heroku-postbuild": "cd prueba_erwin_gulfo_frontend & npm install & npm run build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "heroku-postbuild": "cd client & npm install & npm run build"
   }
+
 }
