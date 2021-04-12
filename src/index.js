@@ -4,10 +4,12 @@ const app= require('./app');
 
 //require('./database');
 
-async function main(){
+function main(){
 	
-	await app.listen(app.get('port'));
-	console.log("App corriendo por el puerto:", app.get('port'));
+	app.listen(process.env.PORT, ()=>{
+		console.log("App corriendo por el puerto:", app.get('port'));
+	});
+	
 
 }
 
