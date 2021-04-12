@@ -2,17 +2,13 @@ require('dotenv').config();
 
 const app= require('./app');
 
-require('./database');
+//require('./database');
 
-function main(){
+async function main(){
 	
-	const PORT = process.env.MONGODB_PORT || 4000;
-	app.listen(PORT, () => {
-    console.log('App is running on port ${ PORT }');
-
-});
+	await app.listen(app.get('port'));
+	console.log("App corriendo por el puerto:", app.get('port'));
 
 }
-
 
 main();
