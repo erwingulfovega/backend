@@ -13,6 +13,6 @@ app.use('/api/users', require('./routes/users'))
 app.use('/api/notes', require('./routes/notes'))
 app.use('/api/recursos', require('./routes/recursos'))
 app.use('/api/tipos', require('./routes/tipos'))
-app.use(express.static(path.join('../client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 module.exports= app; 
