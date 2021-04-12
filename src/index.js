@@ -4,11 +4,15 @@ const app= require('./app');
 
 require('./database');
 
-async function main(){
+function main(){
 	
-	await app.listen(app.get('port'));
-	console.log("App corriendo por el puerto:", app.get('port'));
+	const PORT = process.env.MONGODB_PORT || 4000;
+	app.listen(PORT, () => {
+    console.log('App is running on port ${ PORT }');
+
+});
 
 }
+
 
 main();
